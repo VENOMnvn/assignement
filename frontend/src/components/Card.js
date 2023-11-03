@@ -1,15 +1,7 @@
 import styled from "styled-components";
-import "./Card.css";
+// import "./Card.css";
 import carimage from './assets/bmw3.jpg'
-const data = {
-    carName:"BMW 3 Series",
-    model:"2022",
-    capacity:"4",
-    mode:"hybird",
-    milage:"6.1",
-    type:"Automatic",
-    rentprice:"450"
-}
+
 
 const CardBox = styled.div`
 min-width: 350px;
@@ -25,6 +17,10 @@ flex-direction: column;
 
 const ImageUpper = styled.div`
 margin: auto;
+img{
+  border-radius: 10px;
+    width: 100%;
+}
 `;
 
 const LowerDetails = styled.div`
