@@ -70,7 +70,7 @@ const options = {
   method: 'GET',
   url: 'https://car-data.p.rapidapi.com/cars',
   params: {
-    limit: '12',
+    limit: '15',
     page: currentPage
   },
   headers: {
@@ -92,6 +92,10 @@ return
     getData();
   },[currentPage]);
 
+  const FilterHandle = (filterProp)=>{
+      let chang = data.filter((ele)=>ele.type.includes(filterProp));
+      setData([...chang]);
+  }
 
   const sortHandle =  (prop)=>{
       if(prop == 'price'){
@@ -113,7 +117,7 @@ return
   },[data]);
 
   return (<>
-    <Navbar sort={sortHandle}></Navbar>
+    <Navbar sort={sortHandle} filter={FilterHandle}></Navbar>
     <ContainerBox className='cont'>
     {load?<Loader class="loader"></Loader>:""}
     {data?.map((ele)=><Card data={ele}/>)}

@@ -94,9 +94,14 @@ const Navbar = (props) => {
         Filter
       </NavButton>
       <Menu className="menu">
-        <a href="">Country</a>
-        <a href=""s> Size </a>
-        <a href="#"> Age </a>
+        <a onClick={()=>{props.filter('SUV')}}>SUV</a>
+        <a onClick={()=>{props.filter('Convertible')}}> Convertible </a>
+        <a onClick={()=>{props.filter('Pickup')}}> Pickup </a>
+        <a onClick={()=>{props.filter('Van')}}> Van </a>
+        <a onClick={()=>{props.filter('Minivan')}}> Minivan </a>
+        <a onClick={()=>{props.filter('Hatchback')}}> Hatchback </a>
+        <a onClick={()=>{props.filter('Coupe')}}> Coupe</a>
+        <a onClick={()=>{props.filter('Wagon')}}> Wagon </a>
       </Menu>
     </Dropdown>
 
